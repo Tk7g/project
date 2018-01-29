@@ -27,7 +27,8 @@ class AuthServiceProvider extends ServiceProvider
         $this->registerPolicies($gate);
 
         //хэрэглэгч админ мөн эсэхийг шалгах
-        $gate->define('admin-access', Function ($user){
+        $gate->define('admin-access', function ($user){
+            // dd($user->roles);
             foreach ($user->roles as $role) {
                 if ($role->code == 'web admin') {
                     return true;
@@ -40,6 +41,15 @@ class AuthServiceProvider extends ServiceProvider
         $gate->define('ppeadmin-access', function ($user){
             foreach ($user->roles as $role) {
                 if ($role->code == 'ppe admin'){
+                    return true;
+                }
+            }
+            return false;
+        });
+        // хэрэглэгч user мөн эсэхийг шалгах
+        $gate->define('user-access', function ($user){
+            foreach ($user->roles as $role) {
+                if ($role->code == 'user'){
                     return true;
                 }
             }
