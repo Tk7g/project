@@ -18,25 +18,30 @@ Route::get('/', function () {
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index')->name('home');
+
 
 
 Route::group(['middleware' => ['auth']], function() {
-	Route::get('/logout', 'Auth\LoginController@logout');
-  Route::view('admin/admin', 'admin.admin');
-  Route::get('/users', function (){
-  	$users = \App\User::orderby('created_at', 'desc')->get();
-  	
-  		return view('users', [
-  			'users' => $users,
-  		]);
-  });
+  Route::get('/logout', 'Auth\LoginController@logout');
+  Route::get('/home', 'HomeController@index')->name('home');
+  Route::resource('user', 'UserController');
+  Route::post('/users/create', 'UserController@create')->name('ucreate');
 
-   Route::get('/users/edit/{id}', function ($id) {
+  Route::get('/users/edit/{id}', function ($id) {
         if (\Gate::allows('admin-access')) {
             return 'Access granted';
         }
         return 'Access denied - User zasah erhgui';
     });
+  Route::resource('product', 'ProductController');
+   // Route::get('/register', function () {
+   //  return view('register');
+   // });
 
 });
+
+// Route::group(['middleware' => ['auth'], ['prefix' => 'admin'], function (){
+//   Route::get('admin/admin', ['as' => 'admin', function () {
+//     return view('admin.admin');
+//   }]);
+// }]);
