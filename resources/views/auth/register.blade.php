@@ -1,4 +1,4 @@
-@extends('layouts.app')
+@extends('admin.admin')
 
 @section('content')
 <div class="container">
@@ -25,15 +25,15 @@
                             </div>
                         </div>
 
-                        <div class="form-group{{ $errors->has('email') ? ' has-error' : '' }}">
-                            <label for="email" class="col-md-4 control-label">E-Mail Address</label>
+                        <div class="form-group{{ $errors->has('sap_id') ? ' has-error' : '' }}">
+                            <label for="sap_id" class="col-md-4 control-label">Sap id</label>
 
                             <div class="col-md-6">
-                                <input id="email" type="email" class="form-control" name="email" value="{{ old('email') }}" required>
+                                <input id="sap_id" type="sap_id" class="form-control" name="sap_id" value="{{ old('sap_id') }}" required>
 
-                                @if ($errors->has('email'))
+                                @if ($errors->has('sap_id'))
                                     <span class="help-block">
-                                        <strong>{{ $errors->first('email') }}</strong>
+                                        <strong>{{ $errors->first('sap_id') }}</strong>
                                     </span>
                                 @endif
                             </div>

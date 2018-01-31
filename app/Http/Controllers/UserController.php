@@ -37,7 +37,16 @@ class UserController extends Controller
      */
     public function store(Request $request)
     {
-        
+        // dd($request->all());
+        $model = new \App\User;
+        $model->name = $request->input('name');
+        $model->sap_id = $request->input('sap_id');
+        $model->password = $request->input('password');
+        $model->role = $request->input('role');
+        $model->position = $request->input('position');
+        $model->save();
+
+        return redirect()->to('users.create');
     }
 
     /**

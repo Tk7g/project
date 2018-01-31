@@ -39,11 +39,8 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="{{ route('users') }}"><i class="fa fa-circle-o"></i>Бүх хэрэглэгч</a></li>
-            <li><a href="{{ route('ucreate')}}"><i class="fa fa-circle-o"></i>Шинэ хэрэглэгч</a></li>
-            <li><a href="pages/charts/morris.html"><i class="fa fa-circle-o"></i> Morris</a></li>
-            <li><a href="pages/charts/flot.html"><i class="fa fa-circle-o"></i> Flot</a></li>
-            <li><a href="pages/charts/inline.html"><i class="fa fa-circle-o"></i> Inline charts</a></li>
+            <li><a href="{{ route('users.index') }}"><i class="fa fa-circle-o"></i>Бүх хэрэглэгч</a></li>
+            <li><a href="{{ route('users.create')}}"><i class="fa fa-circle-o"></i>Шинэ хэрэглэгч</a></li> 
           </ul>
         </li>
         <li class="treeview">
@@ -55,12 +52,24 @@
             </span>
           </a>
           <ul class="treeview-menu">
-            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> General</a></li>
-            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Icons</a></li>
-            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Buttons</a></li>
-            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Sliders</a></li>
-            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Timeline</a></li>
-            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Modals</a></li>
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Цамц, гадуур хувцас</a></li>
+            <li><a href="pages/UI/general.html"><i class="fa fa-circle-o"></i> Тусгай хэрэглээний цамц өмд</a></li>
+            <li><a href="pages/UI/icons.html"><i class="fa fa-circle-o"></i> Өмд</a></li>
+            <li><a href="pages/UI/buttons.html"><i class="fa fa-circle-o"></i> Хантааз</a></li>
+            <li><a href="pages/UI/sliders.html"><i class="fa fa-circle-o"></i> Гутал</a></li>
+            <li><a href="pages/UI/timeline.html"><i class="fa fa-circle-o"></i> Толгой, Нүүрний хамгаалалт</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Бээлий</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Нүдний хамгаалалт</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Сонсголын хамгаалалт</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Өндрийн бүс, татлага</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Гар чийдэн, Малгайн гэрэл</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Амьсгалын баг, шүүлтүүр</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Тос</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Цүнх, Хоолны сав</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Үзлэгийн хуудас</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> ЭМААБО-ны хэрэгсэл</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Тусгаарлалтын хэрэгсэл</a></li>
+            <li><a href="pages/UI/modals.html"><i class="fa fa-circle-o"></i> Тууз дарцаг</a></li>
           </ul>
         </li>
         <li class="treeview">

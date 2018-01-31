@@ -11,43 +11,31 @@
                 <thead>
                 <tr>
                   <th>Овог, Нэр</th>
-                  <th>И-мэйл хаяг</th>
+                  <th>Sap id</th>
                   <th>Албан тушаал</th>                  
                   <th>Төлөв</th>
                 </tr>
                 </thead>
-                <tbody>
-                <tr>@foreach($users as $user)
+                <tbody>@foreach($users as $user)
+                <tr>
                         <div>
-                            <td>{{ $user->fname }}.{{ $user->name }}</td>
-                            <td>{{ $user->email }}</td>
+                            <td>{{ $user->name }}</td>
+                            <td>{{ $user->sap_id }}</td>
                             <td>{{ $user->position }}</td>
                             <td style="width: 130px">
                                 <div class="btn-group">
+                                  @can ('admin-access')
                                     <button type="button" class="btn btn-info">
-                                        @can ('admin-access')<a href="{{ url('users/edit', $user->id) }}">Засах</a>@endcan
+                                        <a href="{{ route('users.update', $user->id) }}">Засах</a>
                                     </button>
+                                  @endcan
                                     <button type="button" class="btn btn-danger">Устгах</button>
                                 </div>
                             </td>
                         </div>
+                
+                </tr>
                 @endforeach
-                </tr>
-                <tr>
-                  <td>Trident</td>
-                  <td>Internet
-                    Explorer 4.0
-                  </td>
-                  <td>Win 95+</td>
-                  <td> 4</td>
-                </tr>
-                               
-                <tr>
-                  <td>Other browsers</td>
-                  <td>All others</td>
-                  <td>-</td>
-                  <td>-</td>                  
-                </tr>
                 </tbody>
                 <!-- <tfoot>
                 <tr>
