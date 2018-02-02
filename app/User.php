@@ -35,5 +35,10 @@ class User extends Authenticatable
         return $this->belongsToMany('\App\Role');
     }
 
-    
+    public function hasRole ($code) {
+        return \DB::table('role_user')
+        ->where('user_id', $this->id)
+        ->whereRaw('role_id IN (SELECT id FROM role WHERE code = ?)', $code)
+        ->exists();
+    }
 }

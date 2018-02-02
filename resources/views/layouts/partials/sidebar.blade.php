@@ -11,7 +11,7 @@
                 <div class="pull-left info">
                     <p style="overflow: hidden;text-overflow: ellipsis;max-width: 160px;" data-toggle="tooltip" title="">{{ Auth::user()->name }}</p>
                     <!-- Status -->
-                    <a href="#"><i class="fa fa-circle text-success"></i> {{ ('online') }}</a>
+                    <a href="#"><i class="fa fa-circle text-success"></i> {{ Auth::user()->role }}</a>
                 </div>
             </div>
       @endif
@@ -45,7 +45,7 @@
         </li>
         <li class="treeview">
           <a href="#">
-            <i class="fa fa-list"></i>
+            <i class="fa fa-shopping-cart"></i>
             <span>Каталог</span>
             <span class="pull-right-container">
               <i class="fa fa-angle-left pull-right"></i>

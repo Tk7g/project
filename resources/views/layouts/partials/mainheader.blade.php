@@ -34,7 +34,7 @@
                 <img src="{{ asset('admin/dist/img/user2-160x160.jpg')}}" class="img-circle" alt="User Image">
 
                 <p>
-                  Alexander Pierce - Web Developer
+                  {{ Auth::user()->name }} - {{ Auth::user()->position }}
                   <small>{{ date('Y-m-d') }}</small>
                 </p>
               </li>

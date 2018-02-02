@@ -49,8 +49,8 @@
                                 </div> -->
 
                                 <div class="form-group">
-                                    <div class="col-md-10 col-md-offset-4">
-                                        <button type="submit" class="btn btn-primary">
+                                    <div class="col-md-6 col-md-offset-4">
+                                        <button type="submit" class="btn btn-primary pull-right">
                                             Нэвтрэх
                                         </button>
 

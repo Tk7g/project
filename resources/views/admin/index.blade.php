@@ -22,7 +22,7 @@
                             <td>{{ $user->name }}</td>
                             <td>{{ $user->sap_id }}</td>
                             <td>{{ $user->position }}</td>
-                            <td style="width: 130px">
+                            <td style="width: 150px">
                                 <div class="btn-group">
                                   @can ('admin-access')
                                     <button type="button" class="btn btn-info">

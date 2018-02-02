@@ -55,5 +55,9 @@ class AuthServiceProvider extends ServiceProvider
             }
             return false;
         });
+        Gate::define('role', function ($user, $code = null) {
+            if ($code == null) { $code = \Route::currentRouteName(); }
+                return $user->hasPermission($code);
+        });
     }
 }
